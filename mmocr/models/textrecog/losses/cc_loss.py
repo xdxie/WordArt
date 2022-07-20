@@ -59,7 +59,7 @@ class CCLoss(nn.Module):
 
         loss = self.loss(outputs, targets.to(outputs.device))
         # loss_sup = self.sup_contra_loss(outputs, targets.to(outputs.device))
-        losses = dict(loss_sup=loss)
+        losses = dict(loss_cc=loss)
 
         return losses
 

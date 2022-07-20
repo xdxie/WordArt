@@ -114,7 +114,7 @@ def train_detector(model,
     runner.register_training_hooks(
         cfg.lr_config,
         optimizer_config,
-        cfg.checkpoint_config,
+        cfg.get('checkpoint_config', None),
         cfg.log_config,
         cfg.get('momentum_config', None),
         custom_hooks_config=cfg.get('custom_hooks', None))

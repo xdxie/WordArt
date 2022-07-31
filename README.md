@@ -37,6 +37,20 @@ For example, we use this script to train the model:
 ./tools/dist_train.sh configs/textrecog/corner_transformer/corner_transformer_academic.py outputs/corner_transformer/ 4
 ```
 
+## Evaluation
+For distributed evaluating on multiple GPUs, please use
+```shell
+./tools/dist_test.sh ${CONFIG_FILE} ${CHECKPOINT_FILE} ${GPU_NUM} [PY_ARGS]
+```
+For evaluating on a single GPU, please use
+```shell
+python tools/test.py ${CONFIG_FILE} ${CHECKPOINT_FILE} [ARGS]
+```
+For example, we use this script to evaluate the model performance:
+```shell
+CUDA_VISIBLE_DEVICES=0 python tools/test.py outputs/corner_transformer/corner_transformer_academic.py outputs/corner_transformer/latest.pth --eval acc
+```
+
 ## WordArt Dataset
 The WordArt dataset consists of 6316 artistic text images with 4805 training images and 1511 testing images.  The dataset is available at [Google Drive](https://drive.google.com/file/d/1SanxRwTxd2q7UrQxlbC3BmP3nhFXwZ3g/view?usp=sharing).
 <div align="center">

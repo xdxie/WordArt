@@ -59,6 +59,11 @@ The WordArt dataset consists of 6316 artistic text images with 4805 training ima
   <img src="resources/dataset.jpg"/>
 </div>
 
+## Results
+|Model|IC13|SVT|IIIT|IC15|SVTP|CUTE|WordArt|
+|-|-|-|-|-|-|-|-|
+|CornerTransformer|96.4|94.6|95.9|86.3|91.5|92.0|70.8|
+
 ## Citation
 Please cite the following paper when using the WordArt dataset or this repo.
 

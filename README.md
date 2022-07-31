@@ -1,7 +1,7 @@
 # Toward Understanding WordArt: Corner-Guided Transformer for Scene Text Recognition （ECCV 2022 Oral）
 The official code of CornerTransformer (ECCV 2022, Oral).
 
-This work focuses on a new challenging task of \bf{artistic text recognition}. To tackle the difficulties of this task, we introduce the corner point map as a robust representation for the artistic text image and present the corner-query cross-attention mechanism to make the model achieve more accurate attention. We also design a character contrastive loss to learn the invariant features of characters, leading to tight clustering of features. In order to benchmark the performance of different models, we provide the WordArt dataset.
+This work focuses on a new challenging task of **artistic text recognition**. To tackle the difficulties of this task, we introduce the corner point map as a robust representation for the artistic text image and present the corner-query cross-attention mechanism to make the model achieve more accurate attention. We also design a character contrastive loss to learn the invariant features of characters, leading to tight clustering of features. In order to benchmark the performance of different models, we provide the WordArt dataset.
 <div align="center">
   <img src="resources/architecture.jpg"/>
 </div>
@@ -68,7 +68,7 @@ The WordArt dataset consists of 6316 artistic text images with 4805 training ima
 Each example is along with the results from ABINet-LV, our baseline and the proposed CornerTransformer. Hard examples are successfully recognized by CornerTransformer.
 
 <div align="center">
-  <img src="resources/qualitative.jpg"/>
+  <img src="resources/qualitative.jpg" width=60%/>
 </div>
 
 When decorative patterns from the background have exactly the same appearance and similar shape as the texts, CornerTransformer may fail to achieve correct results. These are indeed challenging examples for any text recognizer. Each image is along with our result and the ground truth.

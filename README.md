@@ -4,6 +4,20 @@ The official code of CornerTransformer (ECCV 2022, Oral).
   <img src="resources/architecture.jpg"/>
 </div>
 
+## Runtime Environment
+This repo depends on [PyTorch](https://pytorch.org/), [MMCV](https://github.com/open-mmlab/mmcv), [MMDetection](https://github.com/open-mmlab/mmdetection) and [MMOCR](https://github.com/open-mmlab/mmocr).
+Below are quick steps for installation.
+Please refer to [MMOCR Install Guide](https://mmocr.readthedocs.io/en/latest/install.html) for more detailed instruction.
+
+```shell
+conda create -n wordart python=3.7 -y
+conda activate wordart
+conda install pytorch==1.10 torchvision cudatoolkit=11.3 -c pytorch
+pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.10.0/index.html
+pip install mmdet
+git clone https://github.com/open-mmlab/mmocr.git
+```
+
 ## WordArt Dataset
 The WordArt dataset consists of 6316 artistic text images with 4805 training images and 1511 testing images.  The dataset is available at [Google Drive](https://drive.google.com/file/d/1SanxRwTxd2q7UrQxlbC3BmP3nhFXwZ3g/view?usp=sharing).
 <div align="center">
@@ -12,6 +26,7 @@ The WordArt dataset consists of 6316 artistic text images with 4805 training ima
 
 ## Citation
 Please cite the following paper when using the WordArt dataset or this repo.
+
 ```
 @article{xie2022toward,
   title={Toward Understanding WordArt: Corner-Guided Transformer for Scene Text Recognition},

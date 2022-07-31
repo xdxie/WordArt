@@ -1,7 +1,5 @@
-# Toward Understanding WordArt: Corner-Guided Transformer for Scene Text Recognition （ECCV 2022 Oral）
-The official code of CornerTransformer 
-
-(ECCV 2022, Oral).
+# Toward Understanding WordArt: Corner-Guided Transformer for Scene Text Recognition (ECCV 2022 Oral)
+The official code of CornerTransformer (ECCV 2022, Oral).
 
 This work focuses on a new challenging task of **artistic text recognition**. To tackle the difficulties of this task, we introduce the corner point map as a robust representation for the artistic text image and present the corner-query cross-attention mechanism to make the model achieve more accurate attention. We also design a character contrastive loss to learn the invariant features of characters, leading to tight clustering of features. In order to benchmark the performance of different models, we provide the WordArt dataset.
 <div align="center">

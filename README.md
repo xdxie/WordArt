@@ -56,7 +56,7 @@ CUDA_VISIBLE_DEVICES=0 python tools/test.py outputs/corner_transformer/corner_tr
 ## WordArt Dataset
 The WordArt dataset consists of 6316 artistic text images with 4805 training images and 1511 testing images.  The dataset is available at [Google Drive](https://drive.google.com/file/d/1SanxRwTxd2q7UrQxlbC3BmP3nhFXwZ3g/view?usp=sharing).
 <div align="center">
-  <img src="resources/dataset.jpg"/>
+  <img src="resources/dataset.jpg" width=90%/>
 </div>
 
 ## Results
@@ -71,7 +71,7 @@ Each example is along with the results from ABINet-LV, our baseline and the prop
   <img src="resources/qualitative.jpg" width=70%/>
 </div>
 
-When decorative patterns from the background have exactly the same appearance and similar shape as the texts, CornerTransformer may fail to achieve correct results. These are indeed challenging examples for any text recognizer. Each image is along with our result and the ground truth.
+When decorative patterns from the background have exactly the same appearance and similar shape as the texts, CornerTransformer may fail to achieve correct results. Each image is along with our result and the ground truth.
 <div align="center">
   <img src="resources/failure.jpg" width=70%/>
 </div>

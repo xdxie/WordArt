@@ -73,7 +73,7 @@ Each example is along with the results from ABINet-LV, our baseline and the prop
 
 When decorative patterns from the background have exactly the same appearance and similar shape as the texts, CornerTransformer may fail to achieve correct results. These are indeed challenging examples for any text recognizer. Each image is along with our result and the ground truth.
 <div align="center">
-  <img src="resources/qualitative.jpg"/>
+  <img src="resources/failure.jpg"/>
 </div>
 
 ## Citation

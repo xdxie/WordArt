@@ -23,6 +23,20 @@ export PYTHONPATH=$(pwd):$PYTHONPATH
 pip install -r requirements/albu.txt
 ```
 
+## Training
+For distributed training on multiple GPUs, please use
+```shell
+./tools/dist_train.sh ${CONFIG_FILE} ${WORK_DIR} ${GPU_NUM} [PY_ARGS]
+```
+For training on a single GPU, please use
+```shell
+python tools/train.py ${CONFIG_FILE} [ARGS]
+```
+For example, we use this script to train the model:
+```shell
+./tools/dist_train.sh configs/textrecog/corner_transformer/corner_transformer_academic.py outputs/corner_transformer/ 4
+```
+
 ## WordArt Dataset
 The WordArt dataset consists of 6316 artistic text images with 4805 training images and 1511 testing images.  The dataset is available at [Google Drive](https://drive.google.com/file/d/1SanxRwTxd2q7UrQxlbC3BmP3nhFXwZ3g/view?usp=sharing).
 <div align="center">

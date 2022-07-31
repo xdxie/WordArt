@@ -15,7 +15,12 @@ conda activate wordart
 conda install pytorch==1.10 torchvision cudatoolkit=11.3 -c pytorch
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.10.0/index.html
 pip install mmdet
-git clone https://github.com/open-mmlab/mmocr.git
+git clone https://github.com/xdxie/WordArt.git
+cd WordArt
+pip install -r requirements.txt
+pip install -v -e .
+export PYTHONPATH=$(pwd):$PYTHONPATH
+pip install -r requirements/albu.txt
 ```
 
 ## WordArt Dataset

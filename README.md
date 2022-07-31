@@ -1,8 +1,14 @@
 # Toward Understanding WordArt: Corner-Guided Transformer for Scene Text Recognition （ECCV 2022 Oral）
 The official code of CornerTransformer (ECCV 2022, Oral).
+<div align="center">
+  <img src="resources/architecture.jpg"/>
+</div>
 
 ## WordArt Dataset
-The dataset is available at [Google Drive](https://drive.google.com/file/d/1SanxRwTxd2q7UrQxlbC3BmP3nhFXwZ3g/view?usp=sharing).
+The WordArt dataset consists of 6316 artistic text images with 4805 training images and 1511 testing images.  The dataset is available at [Google Drive](https://drive.google.com/file/d/1SanxRwTxd2q7UrQxlbC3BmP3nhFXwZ3g/view?usp=sharing).
+<div align="center">
+  <img src="resources/dataset.jpg"/>
+</div>
 
 ## Citation
 Please cite the following paper when using the WordArt dataset or this repo.

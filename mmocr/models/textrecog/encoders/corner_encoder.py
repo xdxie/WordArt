@@ -46,6 +46,11 @@ class CornerEncoder(BaseEncoder):
             n_height=n_position,
             n_width=n_position,
             dropout=dropout)
+        self.position_enc_corner = Adaptive2DPositionalEncoding(
+            d_hid=d_model,
+            n_height=n_position,
+            n_width=n_position,
+            dropout=dropout)
     
         self.layer_stack = ModuleList([
             CornerCrossattnLayer(
@@ -70,6 +75,7 @@ class CornerEncoder(BaseEncoder):
                 img_meta.get('valid_ratio', 1.0) for img_meta in img_metas
             ]
         feat += self.position_enc(feat)
+        corner_feat = self.position_enc_corner(corner_feat)
         
         n, c, h, w = feat.size()
         mask = feat.new_zeros((n, h, w))

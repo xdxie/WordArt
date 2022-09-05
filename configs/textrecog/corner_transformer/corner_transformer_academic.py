@@ -1,6 +1,6 @@
 _base_ = [
     '../../_base_/default_runtime.py',
-    '../../_base_/recog_pipelines/cornertransformer_pipline.py',
+    '../../_base_/recog_pipelines/cornertransformer_pipeline.py',
     '../../_base_/recog_datasets/ST_MJ_train.py',
     '../../_base_/recog_datasets/academic_test.py'
 ]

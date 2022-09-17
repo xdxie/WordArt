@@ -68,3 +68,4 @@ data = dict(
         pipeline=test_pipeline))
 
 evaluation = dict(interval=1, metric='acc')
+checkpoint_config = dict(interval=1)

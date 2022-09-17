@@ -74,7 +74,7 @@ class CornerEncoder(BaseEncoder):
             valid_ratios = [
                 img_meta.get('valid_ratio', 1.0) for img_meta in img_metas
             ]
-        feat += self.position_enc(feat)
+        feat = self.position_enc(feat)
         corner_feat = self.position_enc_corner(corner_feat)
         
         n, c, h, w = feat.size()

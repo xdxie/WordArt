@@ -9,7 +9,7 @@ This work focuses on a new challenging task of **artistic text recognition**. To
 ## Runtime Environment
 This repo depends on [PyTorch](https://pytorch.org/), [MMCV](https://github.com/open-mmlab/mmcv), [MMDetection](https://github.com/open-mmlab/mmdetection) and [MMOCR](https://github.com/open-mmlab/mmocr).
 Below are quick steps for installation.
-Please refer to [MMOCR Install Guide](https://mmocr.readthedocs.io/en/latest/install.html) for more detailed instruction.
+Please refer to [MMOCR 0.6 Install Guide](https://mmocr.readthedocs.io/en/v0.6.0/install.html) for more detailed instruction.
 
 ```shell
 conda create -n wordart python=3.7 -y
@@ -24,6 +24,18 @@ pip install -v -e .
 export PYTHONPATH=$(pwd):$PYTHONPATH
 pip install -r requirements/albu.txt
 ```
+
+## WordArt Dataset
+The WordArt dataset consists of 6316 artistic text images with 4805 training images and 1511 testing images.  The dataset is available at [Google Drive](https://drive.google.com/file/d/1SanxRwTxd2q7UrQxlbC3BmP3nhFXwZ3g/view?usp=sharing).
+<div align="center">
+  <img src="resources/dataset.jpg" width=90%/>
+</div>
+
+## Preparing Datasets
+Please follow the steps in [MMOCR 0.6 Dataset Zoo](https://mmocr.readthedocs.io/en/v0.6.1/datasets/recog.html) to prepare the text recognition datasets. Put all the datasets in `data/mixture` folder. In this repository, we use two synthetic datasets [MJSynth](https://mmocr.readthedocs.io/en/v0.6.1/datasets/recog.html#mjsynth-syn90k) and [SynthText](https://mmocr.readthedocs.io/en/v0.6.1/datasets/recog.html#synthtext-synth800k) to train the model. We evaluate the model performance on [IIIT5k](https://mmocr.readthedocs.io/en/v0.6.1/datasets/recog.html#iiit5k), [IC13](https://mmocr.readthedocs.io/en/v0.6.1/datasets/recog.html#icdar-2013-focused-scene-text), [SVT](https://mmocr.readthedocs.io/en/v0.6.1/datasets/recog.html#svt), [IC15](https://mmocr.readthedocs.io/en/v0.6.1/datasets/recog.html#icdar-2015), [SVTP](https://mmocr.readthedocs.io/en/v0.6.1/datasets/recog.html#svtp), [CUTE](https://mmocr.readthedocs.io/en/v0.6.1/datasets/recog.html#ct80), and our proposed WordArt. 
+
+**Note: Please make sure to reprocess the two training datasets following the [steps](https://mmocr.readthedocs.io/en/v0.6.1/datasets/recog.html#synthtext-synth800k).**
+
 
 ## Training
 For distributed training on multiple GPUs, please use
@@ -52,12 +64,6 @@ For example, we use this script to evaluate the model performance:
 ```shell
 CUDA_VISIBLE_DEVICES=0 python tools/test.py outputs/corner_transformer/corner_transformer_academic.py outputs/corner_transformer/latest.pth --eval acc
 ```
-
-## WordArt Dataset
-The WordArt dataset consists of 6316 artistic text images with 4805 training images and 1511 testing images.  The dataset is available at [Google Drive](https://drive.google.com/file/d/1SanxRwTxd2q7UrQxlbC3BmP3nhFXwZ3g/view?usp=sharing).
-<div align="center">
-  <img src="resources/dataset.jpg" width=90%/>
-</div>
 
 ## Results
 |Method|IC13|SVT|IIIT|IC15|SVTP|CUTE|WordArt|download|
@@ -89,4 +95,4 @@ Please cite the following paper when using the WordArt dataset or this repo.
 ```
 
 ## Acknowledgement
-This repo is based on [MMOCR](https://github.com/open-mmlab/mmocr). We appreciate this wonderful open-source toolbox.
+This repo is based on [MMOCR 0.6](https://github.com/open-mmlab/mmocr). We appreciate this wonderful open-source toolbox.

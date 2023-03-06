@@ -8,6 +8,57 @@ train_pipeline = [
         max_width=128,
         keep_aspect_ratio=False,
         width_downsample_ratio=0.25),
+    dict(
+        type='RandomWrapper',
+        p=0.5,
+        transforms=[
+            dict(
+                type='OneOfWrapper',
+                transforms=[
+                    dict(
+                        type='RandomRotateTextDet',
+                        max_angle=15,
+                    ),
+                    dict(
+                        type='TorchVisionWrapper',
+                        op='RandomAffine',
+                        degrees=15,
+                        translate=(0.3, 0.3),
+                        scale=(0.5, 2.),
+                        shear=(-45, 45),
+                    ),
+                    dict(
+                        type='TorchVisionWrapper',
+                        op='RandomPerspective',
+                        distortion_scale=0.5,
+                        p=1,
+                    ),
+                ])
+        ],
+    ),
+    dict(
+        type='RandomWrapper',
+        p=0.25,
+        transforms=[
+            dict(type='PyramidRescale'),
+            dict(
+                type='Albu',
+                transforms=[
+                    dict(type='MotionBlur', blur_limit=5, p=0.5),
+                ]),
+        ]),
+    dict(
+        type='RandomWrapper',
+        p=0.25,
+        transforms=[
+            dict(
+                type='TorchVisionWrapper',
+                op='ColorJitter',
+                brightness=0.5,
+                saturation=0.5,
+                contrast=0.5,
+                hue=0.1),
+        ]),
     dict(type='ToTensorOCR'),
     dict(type='NormalizeOCR', **img_norm_cfg),
     dict(

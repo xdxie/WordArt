@@ -60,9 +60,9 @@ The WordArt dataset consists of 6316 artistic text images with 4805 training ima
 </div>
 
 ## Results
-|Model|IC13|SVT|IIIT|IC15|SVTP|CUTE|WordArt|
-|-|-|-|-|-|-|-|-|
-|CornerTransformer|96.4|94.6|95.9|86.3|91.5|92.0|70.8|
+|Method|IC13|SVT|IIIT|IC15|SVTP|CUTE|WordArt|download|
+|-|-|-|-|-|-|-|-|-|
+|CornerTransformer|96.4|94.6|95.9|86.3|91.5|92.0|70.8|[model](https://drive.google.com/file/d/1zQoseT9f_86gWtEZqio866ZatnvKc47-/view?usp=sharing)|
 
 ## Visualization
 Each example is along with the results from ABINet-LV, our baseline and the proposed CornerTransformer. Hard examples are successfully recognized by CornerTransformer.

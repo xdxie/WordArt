@@ -50,8 +50,8 @@ lr_config = dict(policy='step', step=[4,5])
 total_epochs = 6
 
 data = dict(
-    samples_per_gpu=70,
-    workers_per_gpu=8,
+    samples_per_gpu=64,
+    workers_per_gpu=4,
     val_dataloader=dict(samples_per_gpu=1),
     test_dataloader=dict(samples_per_gpu=1),
     train=dict(

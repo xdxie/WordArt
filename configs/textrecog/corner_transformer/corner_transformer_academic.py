@@ -46,12 +46,12 @@ model = dict(
 optimizer = dict(type='Adam', lr=3e-4)
 optimizer_config = dict(grad_clip=None)
 # learning policy
-lr_config = dict(policy='step', step=[4])
+lr_config = dict(policy='step', step=[4,5])
 total_epochs = 6
 
 data = dict(
-    samples_per_gpu=64,
-    workers_per_gpu=4,
+    samples_per_gpu=70,
+    workers_per_gpu=8,
     val_dataloader=dict(samples_per_gpu=1),
     test_dataloader=dict(samples_per_gpu=1),
     train=dict(
